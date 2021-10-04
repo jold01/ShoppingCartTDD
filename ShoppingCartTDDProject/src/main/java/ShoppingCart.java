@@ -49,9 +49,6 @@ public class ShoppingCart {
         for(Item item: cart.values()){
             result += item.toString();
         }
-
-
-
         return result;
     }
 

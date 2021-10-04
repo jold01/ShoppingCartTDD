@@ -1,18 +1,17 @@
 //import org.junit.jupiter.*;
-import org.junit.Before;
-import org.junit.BeforeClass;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeAll;
 
 public class ShoppingCartTest {
 
-    ShoppingCart sc = new ShoppingCart();
+    ShoppingCart sc;
 
-//    @BeforeClass
-//    public static void setup() {
-//        ShoppingCart sc = new ShoppingCart();
-//    }
+    @BeforeEach
+    public void setup() {
+        sc = new ShoppingCart();
+    }
     @Test
     public void getCartSize(){
         System.out.println("Get initial cart size");
@@ -50,7 +49,8 @@ public class ShoppingCartTest {
         sc.addItemToCart(new Item("Chicken", 1.00, 2));
         sc.addItemToCart(new Item("Bread", 2.50, 2));
         //System.out.println(sc.viewCart());
-        assertEquals("Item{itemName='Chicken', itemPrice=1.0, quantity=2}Item{itemName='Bread', itemPrice=2.5, quantity=3}", sc.viewCart());
+        assertEquals("Item{itemName='Chicken', itemPrice=1.0, quantity=2, onSale=false}" +
+                "Item{itemName='Bread', itemPrice=2.5, quantity=3, onSale=false}", sc.viewCart());
     }
 
     @Test

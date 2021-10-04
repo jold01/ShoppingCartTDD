@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ShoppingCartTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-01T20:20:56" hostname="LTUS146506" time="0.017">
+<testsuite name="ShoppingCartTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-04T20:36:44" hostname="LTUS146506" time="0.017">
   <properties/>
-  <testcase name="getSubTotalOfItemsInCart()" classname="ShoppingCartTest" time="0.017"/>
+  <testcase name="listItemsInCart()" classname="ShoppingCartTest" time="0.017"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
