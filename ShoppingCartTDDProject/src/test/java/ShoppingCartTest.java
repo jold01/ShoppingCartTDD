@@ -48,9 +48,19 @@ public class ShoppingCartTest {
         sc.addItemToCart(new Item("Bread", 2.50, 1));
         sc.addItemToCart(new Item("Chicken", 1.00, 2));
         sc.addItemToCart(new Item("Bread", 2.50, 2));
-        //System.out.println(sc.viewCart());
-        assertEquals("Item{itemName='Chicken', itemPrice=1.0, quantity=2, onSale=false}" +
-                "Item{itemName='Bread', itemPrice=2.5, quantity=3, onSale=false}", sc.viewCart());
+
+
+        assertEquals("Chicken $1.0 Qty: 2\nBread $2.5 Qty: 3\n", sc.viewCart());
+    }
+
+    @Test
+    public void listItemsInCartOnSale(){
+        sc.addItemToCart(new Item("Bread", 2.50, 1));
+        sc.addItemToCart(new Item("Chicken", 1.00, 2, true));
+        sc.addItemToCart(new Item("Bread", 2.50, 2));
+
+
+        assertEquals("*ON SAlE* Chicken $1.0 Qty: 2\nBread $2.5 Qty: 3\n", sc.viewCart());
     }
 
     @Test

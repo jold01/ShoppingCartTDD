@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ShoppingCartTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-10-05T15:45:15" hostname="LTUS146506" time="0.028">
+<testsuite name="ShoppingCartTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-05T19:59:32" hostname="LTUS146506" time="0.018">
   <properties/>
-  <testcase name="removeLastItemFromCart()" classname="ShoppingCartTest" time="0.019"/>
-  <testcase name="checkPriceSubTotalMultiItem()" classname="ShoppingCartTest" time="0.001"/>
-  <testcase name="checkItemQuantityMultiEntries()" classname="ShoppingCartTest" time="0.001"/>
-  <testcase name="getSubTotalOfItemsInCart()" classname="ShoppingCartTest" time="0.001"/>
-  <testcase name="listItemsInCart()" classname="ShoppingCartTest" time="0.001"/>
-  <testcase name="checkPriceSubTotal()" classname="ShoppingCartTest" time="0.001"/>
-  <testcase name="removeItemFromCart()" classname="ShoppingCartTest" time="0.001"/>
-  <testcase name="getCartSize()" classname="ShoppingCartTest" time="0.001"/>
+  <testcase name="listItemsInCartOnSale()" classname="ShoppingCartTest" time="0.018"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

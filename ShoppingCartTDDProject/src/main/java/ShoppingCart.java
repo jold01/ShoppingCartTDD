@@ -44,12 +44,26 @@ public class ShoppingCart {
         return subtotal;
     }
 
+//    public String viewCart(){
+//        String result = "";
+//        for(Item item: cart.values()){
+//            result += item.toString();
+//        }
+//        return result;
+//    }
+
     public String viewCart(){
-        String result = "";
+        String sb = "";
         for(Item item: cart.values()){
-            result += item.toString();
+
+            if(item.isOnSale()){
+                sb += "*ON SAlE* "+ item.getItemName()+" $"+ item.getItemPrice() + " Qty: " + item.getQuantity() +"\n";
+            }
+            else{
+                sb += item.getItemName()+" $"+ item.getItemPrice() + " Qty: " + item.getQuantity() +"\n";
+            }
         }
-        return result;
+        return sb;
     }
 
     public void removeItemFromCart(String itemName){
@@ -62,6 +76,7 @@ public class ShoppingCart {
             }
         }
     }
+
 
 
 
