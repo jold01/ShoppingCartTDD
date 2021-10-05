@@ -14,14 +14,14 @@ public class ShoppingCartTest {
     }
     @Test
     public void getCartSize(){
-        System.out.println("Get initial cart size");
+        //System.out.println("Get initial cart size");
         int size = sc.getCartSize();
         assertEquals(0, size);
     }
 
     @Test
     public void checkPriceSubTotal(){
-        System.out.println("Add item and check subtotal of item");
+        //System.out.println("Add item and check subtotal of item");
         sc.addItemToCart(new Item("Bread", 2.50, 1));
 
         assertEquals(2.50, sc.getSubtotal() );
@@ -60,6 +60,22 @@ public class ShoppingCartTest {
         sc.addItemToCart(new Item("Bread", 2.50, 2));
 
         assertEquals(9.50, sc.getSubtotal());
+    }
+
+    @Test
+    public void removeItemFromCart(){
+        sc.addItemToCart(new Item("Bread", 2.50, 1));
+        sc.addItemToCart(new Item("Bread", 2.50, 1));
+        sc.removeItemFromCart("Bread");
+        assertEquals(1, sc.getItemFromCart("Bread").getQuantity());
+
+    }
+
+    @Test
+    public void removeLastItemFromCart(){
+        sc.addItemToCart(new Item("Bread", 2.50, 1));
+        sc.removeItemFromCart("Bread");
+        assertEquals(null, sc.getItemFromCart("Bread"));
     }
 
 

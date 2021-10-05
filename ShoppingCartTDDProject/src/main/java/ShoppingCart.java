@@ -52,5 +52,17 @@ public class ShoppingCart {
         return result;
     }
 
+    public void removeItemFromCart(String itemName){
+        Item cartItem = cart.get(itemName);
+        if(cartItem != null){
+            if(cartItem.getQuantity() > 1) {
+                cartItem.setQuantity((cartItem.getQuantity() - 1));
+            }else{
+                cart.remove(itemName);
+            }
+        }
+    }
+
+
 
 }
